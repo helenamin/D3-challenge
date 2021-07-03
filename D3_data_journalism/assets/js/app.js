@@ -147,7 +147,7 @@ function updateToolTip(chosenXAxis, chosenYAxis, circlesGroup) {
    
 
 // Retrieve data from the CSV file and execute everything below
-d3.csv(`assets/data/data.csv`).then(function(stateData, err) {
+d3.csv(`D3_data_journalism/assets/data/data.csv`).then(function(stateData, err) {
     if (err) throw err;
 
     var states_abbr = stateData.map(row => row.abbr);
