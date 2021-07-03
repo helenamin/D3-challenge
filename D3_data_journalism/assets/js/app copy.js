@@ -234,14 +234,14 @@ d3.csv(`assets/data/data.csv`).then(function(stateData, err) {
 
   var ageLabel = xlabelsGroup.append("text")
   .attr("x", 0)
-  .attr("y", 40)
+  .attr("y", 45)
   .attr("value", "age") // value to grab for event listener
   .classed("active", true)
   .text("Age (Median)");
 
   var incomeLabel = xlabelsGroup.append("text")
   .attr("x", 0)
-  .attr("y", 60)
+  .attr("y", 70)
   .attr("value", "income") // value to grab for event listener
   .classed("active", true)
   .text("Household Income (Median)");
