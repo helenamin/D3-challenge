@@ -18,4 +18,4 @@ There are six labels in the scatter plot which gives the user capability of inte
 
 The chart also contains tooltips to reveal a specific element's data when the user hovers their cursor over the element. 
 
-[D3 challenge Gif](/D3-challenge/blob/main/D3_data_journalism/Images/D3.gif)
+[D3 challenge Gif](/D3_data_journalism/Images/D3.gif)
