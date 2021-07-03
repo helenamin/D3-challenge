@@ -1,6 +1,6 @@
 # Data Journalism and D3
 
-Visit the page: 
+Visit the page: https://helenamin.github.io/D3-challenge/
 
 ## Background
 
