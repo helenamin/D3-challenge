@@ -1,6 +1,6 @@
 //Define SVG width and hiegh and margins
-var svgWidth = 960;
-var svgHeight = 500;
+var svgWidth = 860;
+var svgHeight = 700;
 
 var margin = {
   top: 60,
@@ -32,8 +32,8 @@ var chosenYAxis = "healthcare";
 function xScale(stateData, chosenXAxis) {
   // create scales
   var xLinearScale = d3.scaleLinear()
-    .domain([d3.min(stateData, d => d[chosenXAxis]) * 0.95,
-      d3.max(stateData, d => d[chosenXAxis]) * 1.05])
+    .domain([d3.min(stateData, d => d[chosenXAxis]) * 0.9,
+      d3.max(stateData, d => d[chosenXAxis]) * 1.1])
     // .domain([8, d3.max(stateData, d => d[chosenXAxis])])
     .range([0, width]);
 
@@ -56,8 +56,8 @@ function renderXAxes(newXScale, xAxis) {
 function yScale(stateData, chosenYAxis) {
   // create scales
   var yLinearScale = d3.scaleLinear()
-    .domain([d3.min(stateData, d => d[chosenYAxis]) * 0.8,
-      d3.max(stateData, d => d[chosenYAxis]) * 1.05])
+    .domain([d3.min(stateData, d => d[chosenYAxis]) * 0.9,
+      d3.max(stateData, d => d[chosenYAxis]) * 1.1])
     .range([height, 0]);
 
   return yLinearScale;
@@ -127,7 +127,7 @@ function updateToolTip(chosenXAxis, chosenYAxis, circlesGroup) {
 
   var toolTip = d3.tip()
     .attr("class", "d3-tip")
-    .offset([80, -60])
+    .offset([0, 0])
     .html(function(d) {
       return (`${d.state}<br>${xlabel}: ${d[chosenXAxis]} <br>${ylabel}: ${d[chosenYAxis]}`);
     });
@@ -136,10 +136,12 @@ function updateToolTip(chosenXAxis, chosenYAxis, circlesGroup) {
 
   circlesGroup.on("mouseover", function(data) {
     toolTip.show(data);
+    d3.select(this).style("stroke","black");
   })
   // onmouseout event
-  .on("mouseout", function(data, index) {
+  .on("mouseout", function(data) {
       toolTip.hide(data);
+      d3.select(this).style("stroke",null);
     });
 
   return circlesGroup;
@@ -207,22 +209,9 @@ d3.csv(`D3_data_journalism/assets/data/data.csv`).then(function(stateData, err) 
   .append("circle")
   .attr("cx", d => xLinearScale(d.poverty))
   .attr("cy", d => yLinearScale(d.healthcare))
-  .attr("r", 15)
+  .attr("r", 12)
   .attr("fill", "lightblue")
   .attr("opacity", ".9");
-
-  // var texts = chartGroup.append("text")
-  //       .attr("text-anchor", "middle")
-  //       .attr('alignment-baseline', 'central')
-  //       .style('font-size',"0.8em")
-  //       .attr('fill', 'white')
-  //       .selectAll("tspan")
-  //       .data(stateData)
-  //       .enter()
-  //       .append("tspan")
-  //       .attr("x", d => xLinearScale(d.poverty))
-  //       .attr("y", d => yLinearScale(d.healthcare - 0.3))
-  //       .text(d => d.abbr);
 
   var circleTexts = chartGroup.selectAll()
   .data(stateData)
@@ -272,8 +261,8 @@ d3.csv(`D3_data_journalism/assets/data/data.csv`).then(function(stateData, err) 
 
   var healthcareLabel = ylabelsGroup.append("text")
   .attr("transform", "rotate(-90)")
-  .attr("y", (height / 2)-100)
-  .attr("x", 0-margin.left*3)
+  .attr("x", 0-margin.left*4.5)
+  .attr("y", (height / 2)-200)
   .attr("dy", "1em")
   .attr("value", "healthcare") // value to grab for event listener
   .classed("active", true)
@@ -281,16 +270,16 @@ d3.csv(`D3_data_journalism/assets/data/data.csv`).then(function(stateData, err) 
 
   var smokesLabel = ylabelsGroup.append("text")
   .attr("transform", "rotate(-90)")
-  .attr("x", 0-margin.left*3)
-  .attr("y", (height / 2)-110)
+  .attr("x", 0-margin.left*4.5)
+  .attr("y", (height / 2)-210)
   .attr("value", "smokes") // value to grab for event listener
   .classed("inactive", true)
   .text("Smokes (%)");
 
   var obesityLabel = ylabelsGroup.append("text")
   .attr("transform", "rotate(-90)")
-  .attr("x", 0-margin.left*3)
-  .attr("y", (height / 2)-135)
+  .attr("x", 0-margin.left*4.5)
+  .attr("y", (height / 2)-235)
   .attr("value", "obesity") // value to grab for event listener
   .classed("inactive", true)
   .text("Obesity (%)");
