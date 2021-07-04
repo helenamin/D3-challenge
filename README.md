@@ -20,4 +20,4 @@ The chart also contains tooltips to reveal a specific element's data when the us
 
 Here is how it finally looks like:
 
-![D3 challenge Gif](/D3_data_journalism/Images/D3_.gif)
+![D3 challenge Gif](/D3_data_journalism/Images/D3.gif)
