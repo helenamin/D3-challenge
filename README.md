@@ -25,7 +25,7 @@ The data set is based on 2014 ACS 1-year estimates: [https://factfinder.census.g
  
 Health-Risk-Analysis
 |
-|__ D3_data_journalism/                            # contains ETL and ML notebooks
+|__ D3_data_journalism/                            
 |     |__ Images                                   # images used in project
 |     |__ assets
 |         |__static/                                    
