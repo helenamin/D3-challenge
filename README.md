@@ -1,6 +1,15 @@
 # Data Journalism and D3
 
-Visit the page: https://helenamin.github.io/D3-challenge/
+
+
+## Table of Contents
+
+- [Background](#Background)
+- [Structure](#Structure)
+- [Description](#Description)
+- [Deployed Site](#Deployed_Site)
+- [Technology](#Technology)
+- [Contributors](#Contributors)
 
 ## Background
 
@@ -10,6 +19,26 @@ It contains a series of feature stories about the health risks facing particular
 
 The data set is based on 2014 ACS 1-year estimates: [https://factfinder.census.gov/faces/nav/jsf/pages/searchresults.xhtml](https://factfinder.census.gov/faces/nav/jsf/pages/searchresults.xhtml), it includes data on rates of income, obesity, poverty, etc. by state. MOE stands for "margin of error."
 
+## Structure
+```
+ 
+Health-Risk-Analysis
+|
+|__ D3_data_journalism/                            # contains ETL and ML notebooks
+|     |__ Images                                   # images used in project
+|     |__ assets
+|         |__static/                                    
+|            |__ css                               # css files for webpage
+|            |__ data                              # Directory for the data files                        
+|            |__ js                                # js files for webpage
+|
+|__index.html                               
+|__ .gitignore  
+|__ README.md                               # read me file
+
+                   
+```
+
 ## Description
 
 The scatter plot in the page has been created using D3 techniques. It represents each state with circle elements and includes state abbreviations in the circles.
@@ -18,6 +47,19 @@ There are six labels in the scatter plot which gives the user capability of inte
 
 The chart also contains tooltips to reveal a specific element's data when the user hovers their cursor over the element. 
 
+## Deployed Site
+
+Visit the page: https://helenamin.github.io/D3-challenge/
+
 Here is how it finally looks like:
 
 ![D3 challenge Gif](/D3_data_journalism/Images/D3.gif)
+
+## Technology
+
+![PythonLogo](/D3_data_journalism/Images/tools.png)
+
+
+## Contributors
+
+- [Helen Amin](https://github.com/helenamin)
