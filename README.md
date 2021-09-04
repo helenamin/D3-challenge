@@ -8,6 +8,7 @@
 - [Structure](#Structure)
 - [Description](#Description)
 - [Deployed Site](#Deployed_Site)
+- [Datasets](#Datasets)
 - [Technology](#Technology)
 - [Contributors](#Contributors)
 
@@ -54,6 +55,11 @@ Visit the page: https://helenamin.github.io/D3-challenge/
 Here is how it finally looks like:
 
 ![D3 challenge Gif](/D3_data_journalism/Images/D3.gif)
+
+## Datasets
+| # | Source | Link |
+|-|-|-|
+| 1 | United States Census Bureau | [https://factfinder.census.gov/faces/nav/jsf/pages/searchresults.xhtml](https://factfinder.census.gov/faces/nav/jsf/pages/searchresults.xhtml) |
 
 ## Technology
 
